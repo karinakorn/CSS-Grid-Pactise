@@ -1,0 +1,200 @@
+body,
+html {
+    width: 100%;
+    margin: 0px;
+}
+
+body>header,
+body>main>section {
+    padding: 0px 10px;
+}
+
+img {
+    width: 100px;
+}
+
+/* .float-left {
+    float: left
+}
+
+.float-right {
+    float: right
+} */
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+
+li {
+    list-style: none;
+}
+
+/*ul clear style*/
+ul {
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.left {
+    justify-self: start;
+}
+
+.right {
+    justify-self: end;
+}
+
+/* ------ HEADER---------  */
+#hero {
+    height: 100vh;
+}
+
+/* Nav collapsed */
+#primary-nav {
+    max-height: 50px;
+    min-width: 100%;
+
+}
+
+.grid-container-3 {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    padding: 10px;
+    grid-area: auto;
+}
+
+.collapsed li {
+    display: inline;
+
+}
+
+#primary-nav img {
+    max-width: 30px;
+
+}
+
+/* Nav expanded */
+
+#primary-nav .expanded {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightseagreen;
+    display: none;
+}
+
+/* ------------ COMPANY DESCRIPTION ------------ */
+
+.item-1 {
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+.item-2 {
+    grid-area: main;
+    background-color: lightcoral;
+}
+
+
+.item-3 {
+    grid-area: footer;
+    background-color: lightslategrey;
+}
+
+#company-description {
+    display: grid;
+    height: calc(100vh - 50px);
+    grid-template-columns: auto;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+}
+
+/* ---------- PRODUCT SECTION -------------*/
+
+#product-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: [row1-start] 85px [row1-end] auto [third-line] 50px [last-line];
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+}
+
+#product-section img {
+    width: 100%;
+}
+
+.product-card {
+    display: grid;
+    height: 100vh;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: 60% 20% 20%;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+
+}
+
+/* ---------- CHOOSE US SECTION ------------- */
+
+#choose-us-section,
+#service-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: [row1-start] 85px [row1-end] auto [last-line];
+    grid-template-areas:
+        "header"
+        "main"
+}
+
+.choose-us-card {
+    display: grid;
+    height: 50vh;
+    justify-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+
+
+}
+
+/* ------------- SERVICES -----------*/
+#service-section figure {
+    width: 110px;
+    height: 110px;
+}
+
+#service-section ul {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+
+}
+
+.service-card {
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    grid-template-areas:
+        "header"
+        "main"
+
+}
